@@ -23,6 +23,9 @@ $("#submitBtn").on("click", () => {
         },
         body: JSON.stringify(userAnswers)
     }).then(response => response.json()).then(data => {
+        $("#matchModal").modal("show");
+        $("#matchName").text(data.name)
+        $("#matchPhoto").attr("src",data.photo)
         console.log(data)
         console.log(data.name)
         console.log(data.photo)
