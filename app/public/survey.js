@@ -16,7 +16,7 @@ $("#submitBtn").on("click", () => {
         q9: Number($("#q9").val()),
         q10: $("#q10").val()
     }
-    fetch("http://localhost:8080/api/friends", {
+    fetch("/api/friends", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
